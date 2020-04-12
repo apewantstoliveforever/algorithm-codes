@@ -1,14 +1,13 @@
 def selection(A):
     n = len(A)
-    for i in range(1,n):
-        swap = False
-        for j in range(0, i):
-            if A[j] > A[j + 1]:
-                A[j], A[j + 1] = A[j + 1], A[j]
+    for i in range(n):
+        mini = i
+        for j in range(i + 1, n):
+            if A[mini] > A[j]:
+                mini = j
+        A[mini], A[i] = A[i], A[mini]
     return A
 
-A = [2, 3, 1, 2, 5, 9]
+A = [3, 1, 12, 1, 5, 7, 1, 2]
 selection(A)
 print(A)
-
-
