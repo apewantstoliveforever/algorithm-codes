@@ -30,9 +30,26 @@ class Linked_list:
         while(temp):
             print(str(temp.data))
             temp = temp.next
+    def delete_node(self, x):
+        if self.root.data == x:
+            self.root = self.root.next
+            return True
+        n = self.root
+        while n.next is not None:
+            if n.next.data == x:
+                n.next = n.next.next
+                return True
+            n = n.next
+        else:
+            print('there is no element')
+
+
 l = Linked_list()
 l.add_Node('A')
 l.add_Node('B')
 l.add_Node('C')
 l.add_Node('D')
+l.delete_node('D')
+l.add_Node('F')
+l.delete_node('A')
 l.printList()
