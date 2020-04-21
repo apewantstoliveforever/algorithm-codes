@@ -41,7 +41,7 @@ class Linked_list:
                 return True
             n = n.next
         else:
-            print('there is no element')
+            print('there is no ' + x + ' in list')
 
 
 l = Linked_list()
@@ -53,3 +53,4 @@ l.delete_node('D')
 l.add_Node('F')
 l.delete_node('A')
 l.printList()
+l.delete_node('G')
